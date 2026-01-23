@@ -39,7 +39,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 relative">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/5 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -60,7 +60,7 @@ export function Contact() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <Card hover={false}>
+          <Card hover={false} className="bg-dark-800/20 border-slate-800">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Contact Info */}
               <div>
@@ -77,8 +77,8 @@ export function Contact() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5 }}
                     >
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-violet-500/20 to-indigo-500/20">
-                        <item.icon className="text-violet-400" size={20} />
+                      <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-500/10 to-sky-500/10">
+                        <item.icon className="text-emerald-400" size={20} />
                       </div>
                       <div>
                         <p className="text-slate-500 text-sm">{item.label}</p>
@@ -87,7 +87,7 @@ export function Contact() {
                             href={item.href}
                             target={item.href.startsWith('http') ? '_blank' : undefined}
                             rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="text-slate-200 hover:text-violet-400 transition-colors"
+                            className="text-slate-200 hover:text-emerald-400 transition-colors"
                           >
                             {item.value}
                           </a>
@@ -101,9 +101,9 @@ export function Contact() {
               </div>
 
               {/* CTA */}
-              <div className="flex flex-col justify-center items-center text-center p-8 rounded-xl bg-gradient-to-br from-violet-500/10 to-indigo-500/10 border border-violet-500/20">
+              <div className="flex flex-col justify-center items-center text-center p-8 rounded-xl bg-gradient-to-br from-emerald-500/5 to-sky-500/5 border border-emerald-500/20">
                 <motion.div
-                  className="w-20 h-20 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 flex items-center justify-center mb-6"
+                  className="w-20 h-20 rounded-full bg-gradient-to-r from-emerald-500 to-sky-500 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/20"
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
@@ -118,6 +118,7 @@ export function Contact() {
                 <Button
                   href="mailto:camilo.sabogal@hotmail.com?subject=Oportunidad%20de%20Proyecto"
                   size="lg"
+                  className="shadow-emerald-500/20"
                 >
                   <Mail size={20} />
                   Enviar mensaje

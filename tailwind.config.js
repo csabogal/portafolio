@@ -11,10 +11,23 @@ export default {
           900: '#0f172a',
           800: '#1e293b',
           700: '#334155',
+        },
+        primary: {
+          DEFAULT: '#10b981', // Emerald 500
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+        },
+        secondary: {
+          DEFAULT: '#0ea5e9', // Sky 500
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'gradient': 'gradient 8s linear infinite',

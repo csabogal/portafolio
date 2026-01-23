@@ -30,10 +30,10 @@ export function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full">
+              <Card className="h-full hover:border-emerald-500/30">
                 <div className="flex items-center gap-4 mb-5">
-                  <div className="p-3 rounded-xl bg-gradient-to-r from-violet-500/20 to-indigo-500/20">
-                    <category.icon className="text-violet-400" size={24} />
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-500/10 to-sky-500/10">
+                    <category.icon className="text-emerald-400" size={24} />
                   </div>
                   <h3 className="text-xl font-semibold text-slate-100">
                     {category.title}
@@ -46,7 +46,7 @@ export function Skills() {
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Badge>{skill}</Badge>
+                      <Badge className="hover:bg-emerald-500/10 hover:text-emerald-400 transition-colors cursor-default">{skill}</Badge>
                     </motion.div>
                   ))}
                 </div>

@@ -14,9 +14,9 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-gradient-to-r from-violet-500 to-indigo-500 text-white hover:from-violet-600 hover:to-indigo-600 glow-hover',
-  secondary: 'glass text-slate-200 hover:bg-dark-700/80 hover:text-white',
-  ghost: 'text-slate-400 hover:text-white hover:bg-dark-800/50'
+  primary: 'bg-gradient-to-r from-emerald-500 to-sky-500 text-white hover:from-emerald-600 hover:to-sky-600 glow-hover shadow-[0_0_20px_rgba(16,185,129,0.2)]',
+  secondary: 'glass text-slate-200 hover:bg-dark-800/80 hover:text-white border-slate-700/50 hover:border-emerald-500/30',
+  ghost: 'text-slate-400 hover:text-emerald-400 hover:bg-dark-800/50'
 }
 
 const sizes = {

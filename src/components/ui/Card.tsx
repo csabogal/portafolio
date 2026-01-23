@@ -12,7 +12,7 @@ export function Card({ children, className = '', hover = true }: CardProps) {
     <motion.div
       className={`
         glass rounded-2xl p-6
-        ${hover ? 'hover:border-slate-600/50 glow-hover transition-all duration-300' : ''}
+        ${hover ? 'hover:border-emerald-500/30 glow-hover transition-all duration-300' : ''}
         ${className}
       `}
       initial={{ opacity: 0, y: 20 }}

@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Portafolio - Cristian Camilo Sabogal López
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web de portafolio personal construido con React 19, TypeScript, Vite y Tailwind CSS 4.
 
-Currently, two official plugins are available:
+## Comandos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev      # Iniciar servidor de desarrollo con HMR
+npm run build    # Verificación de TypeScript + build de producción con Vite
+npm run lint     # Ejecutar ESLint
+npm run preview  # Previsualizar build de producción localmente
+npm run deploy   # Compilar y desplegar en GitHub Pages
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Arquitectura
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Organización de Componentes
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **`src/components/ui/`** - Primitivos de UI reutilizables (Button, Card, Badge) con exportación barrel vía `index.ts`
+- **`src/components/layout/`** - Componentes de estructura de página (Header, Footer) con exportación barrel
+- **`src/components/sections/`** - Secciones principales de la página (Hero, About, Projects, Skills, Contact) con exportación barrel
+- **`src/data/`** - Archivos de datos estáticos para el contenido de proyectos y habilidades
+
+### Patrones Clave
+
+- El alias de ruta `@` apunta a `./src` (configurado en vite.config.ts)
+- Los componentes usan exportaciones nombradas y se re-exportan desde archivos index.ts
+- Las animaciones usan Framer Motion
+- Los iconos provienen de lucide-react
+- Tema personalizado de Tailwind con escalas de colores `dark-*`, `primary` y `secondary` en tailwind.config.js
+- Fuentes personalizadas: Inter (cuerpo), Outfit (encabezados)
+
+## Tecnologías
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Framer Motion
+- Lucide React

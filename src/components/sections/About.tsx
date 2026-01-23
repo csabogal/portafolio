@@ -5,13 +5,13 @@ import { Card, Badge } from '../ui'
 const highlights = [
   {
     icon: Calendar,
-    title: '+4 años',
+    title: '+8 años',
     description: 'de experiencia en tecnología'
   },
   {
     icon: Briefcase,
-    title: 'Juriscoop',
-    description: 'Analista de Tecnología (2018-2022)'
+    title: 'Seguros Alfa',
+    description: 'Analista de Accesos (2022-Actual)'
   },
   {
     icon: GraduationCap,
@@ -26,11 +26,10 @@ const highlights = [
 ]
 
 const certifications = [
-  'Git y GitHub',
-  'Prompt Engineering',
-  'Inteligencia Artificial',
   'Front-End Developer',
-  'Fundamentos de JavaScript'
+  'Git y GitHub',
+  'Inteligencia Artificial',
+  'Prompt Engineering'
 ]
 
 export function About() {
@@ -60,28 +59,29 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Card hover={false} className="h-full">
-              <h3 className="text-2xl font-semibold text-slate-100 mb-6">
+            <Card hover={false} className="h-full bg-dark-800/30 border-slate-800">
+              <h3 className="text-2xl font-semibold text-slate-100 mb-6 flex items-center gap-2">
                 Mi Historia
               </h3>
               <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
-                  Soy un <span className="text-violet-400 font-medium">Desarrollador Front-End</span> con
-                  sólida experiencia en tecnología y soporte técnico. Mi carrera comenzó en
-                  <span className="text-violet-400 font-medium"> Juriscoop</span>, donde trabajé durante
-                  4 años como Analista de Tecnología, desarrollando soluciones con React, JavaScript,
-                  Node.js y bases de datos.
+                  Soy un <span className="text-emerald-400 font-medium font-mono">Software Developer</span> con
+                  más de 8 años de experiencia en tecnología. Actualmente trabajo en
+                  <span className="text-sky-400 font-medium"> Seguros Alfa</span> como Analista de Accesos,
+                  donde diseñé y desarrollé <span className="text-sky-400 font-medium">HAGA+</span>, una
+                  herramienta que redujo errores manuales en 95% y tiempos operativos en 40%.
                 </p>
                 <p>
-                  Actualmente me encuentro cursando el último semestre de <span className="text-violet-400 font-medium">Ingeniería de Software</span> en
-                  el Politécnico Grancolombiano, combinando mi formación académica con el desarrollo
-                  de proyectos personales que me permiten explorar nuevas tecnologías.
+                  Mi carrera incluye experiencia en <span className="text-sky-400 font-medium">Juriscoop</span> (2018-2022),
+                  donde construí dashboards con React y Node.js, y automaticé procesos críticos con Python.
+                  Actualmente curso el último semestre de <span className="text-emerald-400 font-medium">Ingeniería de Software</span> en
+                  el Politécnico Grancolombiano.
                 </p>
                 <p>
-                  Me apasiona crear aplicaciones web modernas, intuitivas y funcionales. Mis proyectos
-                  recientes incluyen <span className="text-violet-400 font-medium">Strimo</span>, un SaaS
-                  para gestión de suscripciones, y <span className="text-violet-400 font-medium">HagaMas</span>,
-                  una herramienta de automatización empresarial.
+                  Me especializo en desarrollo frontend y full stack, automatización de procesos y
+                  creación de herramientas internas de alto impacto. Mi proyecto personal
+                  <span className="text-sky-400 font-medium"> Strimo</span> es un SaaS con IA para
+                  gestión de suscripciones compartidas.
                 </p>
               </div>
 
@@ -111,9 +111,9 @@ export function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="text-center h-full">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-r from-violet-500/20 to-indigo-500/20 mb-4">
-                    <item.icon className="text-violet-400" size={28} />
+                <Card className="text-center h-full hover:border-emerald-500/30 group">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-r from-emerald-500/10 to-sky-500/10 mb-4 group-hover:from-emerald-500/20 group-hover:to-sky-500/20 transition-all">
+                    <item.icon className="text-emerald-400 group-hover:scale-110 transition-transform duration-300" size={28} />
                   </div>
                   <h4 className="text-xl font-semibold text-slate-100 mb-2">
                     {item.title}

@@ -38,7 +38,6 @@ export const skillCategories: SkillCategory[] = [
       'Python',
       'Flask',
       'Node.js',
-      'PHP',
       'REST APIs'
     ]
   },
@@ -49,9 +48,9 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       'MySQL',
       'PostgreSQL',
+      'MongoDB',
       'SQLite',
-      'Supabase',
-      'SQL'
+      'Supabase'
     ]
   },
   {
@@ -86,8 +85,8 @@ export const skillCategories: SkillCategory[] = [
       'Prompt Engineering',
       'Inteligencia Artificial',
       'Groq',
-      'OpenAI API',
-      'Soporte Técnico'
+      'VBA',
+      'Active Directory'
     ]
   }
 ]
