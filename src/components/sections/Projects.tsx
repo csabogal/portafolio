@@ -37,8 +37,8 @@ export function Projects() {
               <Card hover={false} className="overflow-hidden bg-dark-800/20 border-slate-800 hover:border-emerald-500/20 transition-all duration-300">
                 <div className={`grid lg:grid-cols-2 gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   {/* Project Image */}
-                  <div className={`relative group ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                    <div className="aspect-video rounded-xl overflow-hidden bg-dark-700">
+                  <div className={`group ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="relative aspect-video rounded-xl overflow-hidden bg-dark-700">
                       <img
                         src={project.image}
                         alt={`Preview de ${project.title}`}
@@ -56,8 +56,8 @@ export function Projects() {
                           }
                         }}
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
                   </div>
 
                   {/* Project Info */}
@@ -73,6 +73,13 @@ export function Projects() {
                     <p className="text-slate-300 mb-6 leading-relaxed">
                       {project.longDescription}
                     </p>
+
+                    {project.recognition && (
+                      <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-lg text-emerald-400 text-sm font-medium">
+                        <span className="text-lg">🏆</span>
+                        {project.recognition}
+                      </div>
+                    )}
 
                     {/* Features */}
                     <div className="mb-6">

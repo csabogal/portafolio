@@ -110,7 +110,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            +8 años creando <span className="text-emerald-400 font-medium">aplicaciones web</span>, automatización de procesos
+            +4 años creando <span className="text-emerald-400 font-medium">aplicaciones web</span>, automatización de procesos
             <br className="hidden md:block" />
             <span className="mt-2 block">
               y <span className="text-sky-400 font-medium">herramientas internas</span> de alto impacto en el sector financiero y asegurador.

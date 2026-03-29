@@ -9,9 +9,37 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
+  recognition?: string;
 }
 
 export const projects: Project[] = [
+  {
+    id: "hagamas",
+    title: "HAGA+",
+    description:
+      "Aplicación empresarial para automatización de procesos en Seguros Alfa.",
+    longDescription:
+      "HAGA+ es una aplicación web desarrollada para Seguros Alfa que automatiza procesos del área de Gestión de Accesos. Incluye generación de documentos PDF, plantillas de correo personalizables, gestión de usuarios y un tablero de notas para el equipo.",
+    image: "/projects/hagamas-landing.png",
+    technologies: [
+      "Python",
+      "Flask",
+      "SQLite",
+      "Tailwind CSS",
+      "ReportLab",
+      "Jinja2",
+    ],
+    features: [
+      "API interna simulada de Directorio Activo con autocompletado",
+      "Generación automática de documentos PDF",
+      "Sistema de plantillas de correo",
+      "Tablero de notas adhesivas",
+      "Automatización de procesos administrativos",
+    ],
+    githubUrl: "https://github.com/csabogal/HAGA",
+    featured: true,
+    recognition: "Reconocimiento 'Somos Innovadores' - Seguros Alfa (2026)",
+  },
   {
     id: "strimo",
     title: "Strimo",
@@ -38,33 +66,6 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://strimoapp.site/",
     githubUrl: "https://github.com/csabogal/strimo",
-    featured: true,
-  },
-  {
-    id: "hagamas",
-    title: "HAGA+",
-    description:
-      "Aplicación empresarial para automatización de procesos en Seguros Alfa.",
-    longDescription:
-      "HAGA+ es una aplicación web desarrollada para Seguros Alfa que automatiza procesos del área de Gestión de Accesos. Incluye generación de documentos PDF, plantillas de correo personalizables, gestión de usuarios y un tablero de notas para el equipo.",
-    image: "/projects/hagamas-landing.png",
-    technologies: [
-      "Python",
-      "Flask",
-      "SQLite",
-      "Tailwind CSS",
-      "ReportLab",
-      "Jinja2",
-    ],
-    features: [
-      "Generación automática de documentos PDF",
-      "Sistema de plantillas de correo",
-      "Gestión de usuarios",
-      "Tablero de notas adhesivas",
-      "Automatización de procesos administrativos",
-      "Interfaz intuitiva y responsive",
-    ],
-    githubUrl: "https://github.com/csabogal/HAGA",
     featured: true,
   },
 ];

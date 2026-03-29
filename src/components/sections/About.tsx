@@ -5,8 +5,8 @@ import { Card, Badge } from '../ui'
 const highlights = [
   {
     icon: Calendar,
-    title: '+8 años',
-    description: 'de experiencia en tecnología'
+    title: '+10 años',
+    description: 'de experiencia en el área de tecnología'
   },
   {
     icon: Briefcase,
@@ -66,7 +66,7 @@ export function About() {
               <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
                   Soy un <span className="text-emerald-400 font-medium font-mono">Software Developer</span> con
-                  más de 8 años de experiencia en tecnología. Actualmente trabajo en
+                  más de 10 años de experiencia en el área de tecnología. Actualmente trabajo en
                   <span className="text-sky-400 font-medium"> Seguros Alfa</span> como Analista de Accesos,
                   donde diseñé y desarrollé <span className="text-sky-400 font-medium">HAGA+</span>, una
                   herramienta que redujo errores manuales en 95% y tiempos operativos en 40%.
