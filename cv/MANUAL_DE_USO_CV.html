@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Uso — System Sastre (Antigravity & OpenCode)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen selection:bg-emerald-500 selection:text-white pb-20">
+
+    <!-- Header / Hero -->
+    <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-emerald-500/20">
+                    📄
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-white tracking-tight">Sastre Agent</h1>
+                    <p class="text-xs text-emerald-400 font-mono">Antigravity & OpenCode Workflow v1.2</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-3 text-xs font-mono">
+                <span class="px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Sistema Listo (Límite 2 Págs)
+                </span>
+                <span class="px-3 py-1.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                    Linux / Antigravity / OpenCode
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pt-10 space-y-12">
+
+        <!-- Banner Introductorio -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 p-8 md:p-10 shadow-2xl">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative z-10 max-w-3xl space-y-4">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    Guía de Usuario
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                    Personaliza tu Hoja de Vida para cada oferta laboral en segundos
+                </h2>
+                <p class="text-slate-400 text-base leading-relaxed">
+                    Este sistema utiliza tu <strong class="text-white">Perfil Técnico completo</strong> y las <strong class="text-white">Reglas ATS 2026</strong> de tu Universidad para adaptar automáticamente tu HV Maestra en LaTeX a las exigencias de cada empresa, garantizando un <strong class="text-emerald-400">límite estricto de máximo 2 páginas</strong> sin inventar información.
+                </p>
+            </div>
+        </section>
+
+        <!-- Pasos Rápidos (Quick Start) -->
+        <section class="space-y-6">
+            <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                <span class="text-emerald-400">⚡</span> Inicio Rápido (3 Pasos)
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Paso 1 -->
+                <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 space-y-3 relative hover:border-slate-700 transition-all shadow-lg">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold font-mono border border-emerald-500/20">
+                        1
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">Abre OpenCode</h4>
+                    <p class="text-sm text-slate-400">
+                        Abre tu terminal en el directorio raíz de tus proyectos:
+                    </p>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 overflow-x-auto">
+                        cd /home/csabogal/Documentos/PROYECTOS<br>
+                        opencode
+                    </div>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 space-y-3 relative hover:border-slate-700 transition-all shadow-lg">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold font-mono border border-emerald-500/20">
+                        2
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">Ejecuta el Comando</h4>
+                    <p class="text-sm text-slate-400">
+                        Usa el comando especial indicando la empresa y el cargo:
+                    </p>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-xs text-emerald-300 overflow-x-auto">
+                        /personalizar-hv Frontend Developer en Rappi
+                    </div>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 space-y-3 relative hover:border-slate-700 transition-all shadow-lg">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold font-mono border border-emerald-500/20">
+                        3
+                    </div>
+                    <h4 class="text-lg font-semibold text-white">Obtén tu PDF (Max 2 Págs)</h4>
+                    <p class="text-sm text-slate-400">
+                        Tu CV adaptado y verificado se guardará en tu carpeta <code class="text-emerald-300">HV</code>:
+                    </p>
+                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 overflow-x-auto">
+                        ~/Documentos/HV/Frontend-Developer-Rappi/cv_camilo.pdf
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formas de Uso / Escenarios -->
+        <section class="space-y-6">
+            <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                <span class="text-emerald-400">🎯</span> 3 Modos de Uso
+            </h3>
+
+            <div class="space-y-4">
+
+                <!-- Modo 1 -->
+                <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-emerald-400 font-mono">Modo 1: Básico (Empresa + Cargo)</span>
+                        <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full">Más rápido</span>
+                    </div>
+                    <p class="text-sm text-slate-300">
+                        Ideal si solo quieres adaptar el título y priorizar habilidades rápidamente para una empresa conocida.
+                    </p>
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-sm text-emerald-400">
+                        /personalizar-hv Desarrollador Full Stack en Globant
+                    </div>
+                </div>
+
+                <!-- Modo 2 -->
+                <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-emerald-400 font-mono">Modo 2: Vacante Completa (Pegar Oferta)</span>
+                        <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full">Recomendado</span>
+                    </div>
+                    <p class="text-sm text-slate-300">
+                        Pega la descripción completa de la vacante de LinkedIn o Computrabajo. El agente extraerá las palabras clave exactas (Keywords ATS) y adaptará los bullets.
+                    </p>
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">
+<span class="text-emerald-400 font-bold">/personalizar-hv</span>
+
+Empresa: Bancolombia
+Cargo: Desarrollador Python Senior
+Requerimientos:
+- Experiencia en Python, Flask o Django
+- Creación de APIs REST y microservicios
+- Automatización de procesos e integración con bases de datos SQL
+- Deseable conocimiento en Docker y metodologías ágiles
+                    </div>
+                </div>
+
+                <!-- Modo 3 -->
+                <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-emerald-400 font-mono">Modo 3: Conversación Libre</span>
+                        <span class="text-xs bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full">Flexible</span>
+                    </div>
+                    <p class="text-sm text-slate-300">
+                        Simplemente háblale a OpenCode en lenguaje natural sobre la oferta que viste.
+                    </p>
+                    <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 font-mono text-sm text-slate-300">
+                        "Encontré una oferta de Frontend Developer en Mercado Libre. Piden React, TypeScript, Tailwind y foco en performance. Por favor personaliza mi HV."
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Regla de las 2 Páginas y Ajuste Automático -->
+        <section class="bg-gradient-to-r from-emerald-950/40 to-slate-900 rounded-3xl p-8 border border-emerald-500/30 space-y-4">
+            <h3 class="text-xl font-bold text-emerald-400 flex items-center gap-2">
+                <span>🛡️</span> Regla de Control de Páginas (Auto-Fit a 2 Páginas)
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+                El agente cuenta con un paso de <strong class="text-white">verificación automática post-compilación</strong> (`pdfinfo`). Si al adaptar el contenido la Hoja de Vida llega a desbordar a una 3ª página (incluso por una sola línea), el agente realiza un micro-ajuste automático en el espaciado vertical (`\vspace`, `parsep` o longitud de párrafos) y recompila hasta asegurar que el PDF final ocupe <strong class="text-emerald-400">exactamente 2 páginas perfectas</strong> sin desbordamientos ni líneas huérfanas.
+            </p>
+        </section>
+
+        <!-- ¿Qué sucede internamente? (Arquitectura del agente) -->
+        <section class="bg-slate-900/40 rounded-3xl p-8 border border-slate-800/80 space-y-6">
+            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                <span class="text-emerald-400">🧠</span> ¿Qué hace el agente automáticamente?
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 space-y-1">
+                    <h5 class="font-semibold text-emerald-400">1. Analiza las Keywords ATS</h5>
+                    <p class="text-slate-400 text-xs">Identifica las tecnologías y verbos de acción clave de la vacante.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 space-y-1">
+                    <h5 class="font-semibold text-emerald-400">2. Adapta el Perfil Profesional</h5>
+                    <p class="text-slate-400 text-xs">Reescribe las primeras 3 líneas para destacar la coincidencia con la oferta.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 space-y-1">
+                    <h5 class="font-semibold text-emerald-400">3. Reordena Habilidades</h5>
+                    <p class="text-slate-400 text-xs">Coloca primero las tecnologías que exige el empleador en cada categoría.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 space-y-1">
+                    <h5 class="font-semibold text-emerald-400">4. Aplica Reglas Inviolables</h5>
+                    <p class="text-slate-400 text-xs">Garantiza NO inventar experiencia ni modificar datos de contacto.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 space-y-1">
+                    <h5 class="font-semibold text-emerald-400">5. Genera Estructura de Carpetas</h5>
+                    <p class="text-slate-400 text-xs">Crea <code>~/Documentos/HV/Cargo-Empresa/</code> para mantener todo organizado.</p>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-900 border border-slate-800/80 space-y-1">
+                    <h5 class="font-semibold text-emerald-400">6. Compila y Verifica Extensión</h5>
+                    <p class="text-slate-400 text-xs">Compila con <code>tectonic</code> y verifica que el PDF contenga máximo 2 páginas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicación de Archivos del Sistema -->
+        <section class="space-y-4">
+            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                <span class="text-emerald-400">📁</span> Mapa de Archivos del Sistema
+            </h3>
+
+            <div class="mt-4 mb-6 p-4 border border-amber-500/30 bg-amber-500/10 rounded-xl">
+                <h4 class="font-bold text-amber-400 flex items-center gap-2 mb-2">
+                    <i data-lucide="cloud" class="w-4 h-4"></i> Backup de Datos Personales (OneDrive)
+                </h4>
+                <p class="text-sm text-slate-300">
+                    Por seguridad, los archivos <code>cv_camilo.tex</code> y los PDF generados no se suben a Git (están ignorados en <code>.gitignore</code>). <strong>Recuerda subir tu plantilla maestra a tu OneDrive personal</strong> para tener el respaldo cuando cambies de computador.
+                </p>
+            </div>
+
+            <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto">
+<span class="text-emerald-400 font-bold">/home/csabogal/Documentos/</span>
+├── <span class="text-amber-300 font-bold">PROYECTOS/</span>                               <span class="text-slate-500">← Workspace principal (Dual: Antigravity + OpenCode)</span>
+│   ├── Portafolio/cv/
+│   │   ├── <span class="text-emerald-300 font-bold">MANUAL_DE_USO_CV.html</span>              <span class="text-slate-500">← Este manual gráfico</span>
+│   │   ├── <span class="text-emerald-300 font-bold">cv_camilo.tex</span>                      <span class="text-slate-500">← TU HOJA DE VIDA MAESTRA</span>
+│   │   ├── <span class="text-emerald-300 font-bold">cv_camilo.pdf</span>                      <span class="text-slate-500">← PDF MAESTRO ACTUALIZADO</span>
+│   │   └── <span class="text-slate-400">compilar.sh</span>                        <span class="text-slate-500">← Script de compilación LaTeX</span>
+│   ├── .agents/
+│   │   ├── agents/<span class="text-teal-300">sastre.md</span>           <span class="text-slate-500">← Agente Ejecutor</span>
+│   │   └── commands/<span class="text-teal-300">personalizar-hv.md</span>          <span class="text-slate-500">← Comando /personalizar-hv</span>
+│   └── .agents/skills/sastre/
+│       ├── <span class="text-teal-300">SKILL.md</span>                              <span class="text-slate-500">← Skill e instrucciones</span>
+│       └── references/
+│           ├── <span class="text-slate-300">perfil_tecnico.md</span>                <span class="text-slate-500">← Tu inventario técnico real</span>
+│           ├── <span class="text-slate-300">best_practices.md</span>                <span class="text-slate-500">← Guía ATS 2026 & Universidad</span>
+│           └── <span class="text-slate-300">reglas.md</span>                        <span class="text-slate-500">← Restricciones e inviolables (Límite 2 Págs)</span>
+│
+└── <span class="text-emerald-400 font-bold">HV/</span>                                         <span class="text-slate-500">← CARPETA DONDE SE GUARDAN TUS CVS ADAPTADOS</span>
+    ├── <span class="text-slate-400">Desarrollador-Full-Stack-Globant/</span>       <span class="text-slate-500">← Carpeta generada por oferta</span>
+    │   ├── cv_camilo.tex
+    │   └── <span class="text-emerald-400 font-bold">cv_camilo.pdf</span>
+    └── <span class="text-slate-400">Frontend-Developer-Rappi/</span>              <span class="text-slate-500">← Carpeta generada por oferta</span>
+        ├── cv_camilo.tex
+        └── <span class="text-emerald-400 font-bold">cv_camilo.pdf</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 mt-20 pt-8 pb-12 text-center text-xs text-slate-500">
+        <p>Sistema desarrollado para Cristian Camilo Sabogal López • 2026</p>
+        <p class="mt-1 text-slate-600">Politécnico Grancolombiano • Graduación Ingeniería de Software</p>
+    </footer>
+
+</body>
+</html>

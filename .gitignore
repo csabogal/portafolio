@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 # Archivos de apoyo
-/cv/
+/cv/*.tex
+/cv/*.pdf
 CLAUDE.md
