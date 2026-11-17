@@ -16,7 +16,7 @@ const highlights = [
   {
     icon: GraduationCap,
     title: 'Ing. de Software',
-    description: 'Politécnico Grancolombiano'
+    description: 'Graduado · Politécnico Grancolombiano'
   },
   {
     icon: Award,
@@ -74,7 +74,7 @@ export function About() {
                 <p>
                   Mi carrera incluye experiencia en <span className="text-sky-400 font-medium">Juriscoop</span> (2018-2022),
                   donde construí dashboards con React y Node.js, y automaticé procesos críticos con Python.
-                  Actualmente curso el último semestre de <span className="text-emerald-400 font-medium">Ingeniería de Software</span> en
+                  Soy graduado de <span className="text-emerald-400 font-medium">Ingeniería de Software</span> en
                   el Politécnico Grancolombiano.
                 </p>
                 <p>

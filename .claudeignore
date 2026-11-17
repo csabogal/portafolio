@@ -1,0 +1,15 @@
+# .claudeignore — Portafolio (React / TypeScript / Vite)
+# Optimización de tokens
+
+node_modules/
+dist/
+build/
+package-lock.json
+.cache/
+
+# Archivos pesados / CVs compilados
+*.pdf
+*.log
+.env
+.env.*
+!.env.example

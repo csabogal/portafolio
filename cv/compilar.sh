@@ -12,6 +12,8 @@ rm -f *.aux *.log *.out *.fdb_latexmk *.fls
 COMPILER=""
 if command -v pdflatex &> /dev/null; then
     COMPILER="pdflatex -interaction=nonstopmode"
+elif [ -f "../../.bin/tectonic" ]; then
+    COMPILER="../../.bin/tectonic"
 elif [ -f "$HOME/.local/bin/tectonic" ]; then
     COMPILER="$HOME/.local/bin/tectonic"
 elif command -v tectonic &> /dev/null; then
